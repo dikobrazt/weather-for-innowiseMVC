@@ -9,14 +9,22 @@
 /* Begin PBXBuildFile section */
 		EA1D3D1A280D9DBD00CAA483 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D19280D9DBD00CAA483 /* AppDelegate.swift */; };
 		EA1D3D1C280D9DBD00CAA483 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D1B280D9DBD00CAA483 /* SceneDelegate.swift */; };
-		EA1D3D1E280D9DBD00CAA483 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D1D280D9DBD00CAA483 /* ViewController.swift */; };
-		EA1D3D21280D9DBD00CAA483 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1D3D1F280D9DBD00CAA483 /* Main.storyboard */; };
+		EA1D3D1E280D9DBD00CAA483 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D1D280D9DBD00CAA483 /* MainView.swift */; };
 		EA1D3D24280D9DBD00CAA483 /* TWeather2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D22280D9DBD00CAA483 /* TWeather2.xcdatamodeld */; };
 		EA1D3D26280D9DC000CAA483 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA1D3D25280D9DC000CAA483 /* Assets.xcassets */; };
 		EA1D3D29280D9DC000CAA483 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1D3D27280D9DC000CAA483 /* LaunchScreen.storyboard */; };
 		EA1D3D34280D9DC100CAA483 /* TWeather2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D33280D9DC100CAA483 /* TWeather2Tests.swift */; };
 		EA1D3D3E280D9DC100CAA483 /* TWeather2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D3D280D9DC100CAA483 /* TWeather2UITests.swift */; };
 		EA1D3D40280D9DC100CAA483 /* TWeather2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D3F280D9DC100CAA483 /* TWeather2UITestsLaunchTests.swift */; };
+		EA1D3D4F280DA58500CAA483 /* ForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D4E280DA58500CAA483 /* ForecastView.swift */; };
+		EA1D3D53280DA5CB00CAA483 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D52280DA5CB00CAA483 /* MainVM.swift */; };
+		EA1D3D55280DA5DA00CAA483 /* ForecastVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D54280DA5DA00CAA483 /* ForecastVM.swift */; };
+		EA1D3D57280DA60100CAA483 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D56280DA60100CAA483 /* WeatherModel.swift */; };
+		EA1D3D59280DA63400CAA483 /* MainViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D58280DA63400CAA483 /* MainViewExt.swift */; };
+		EA1D3D5B280DA64900CAA483 /* ForecastViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D5A280DA64900CAA483 /* ForecastViewExt.swift */; };
+		EA1D3D5D280DAB2E00CAA483 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D5C280DAB2E00CAA483 /* InfoView.swift */; };
+		EA1D3D5F280DAB4200CAA483 /* InfoViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D5E280DAB4200CAA483 /* InfoViewExt.swift */; };
+		EA1D3D61280DAB5100CAA483 /* InfoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D60280DAB5100CAA483 /* InfoVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +48,7 @@
 		EA1D3D16280D9DBD00CAA483 /* TWeather2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWeather2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA1D3D19280D9DBD00CAA483 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA1D3D1B280D9DBD00CAA483 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EA1D3D1D280D9DBD00CAA483 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EA1D3D20280D9DBD00CAA483 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA1D3D1D280D9DBD00CAA483 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		EA1D3D23280D9DBD00CAA483 /* TWeather2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TWeather2.xcdatamodel; sourceTree = "<group>"; };
 		EA1D3D25280D9DC000CAA483 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA1D3D28280D9DC000CAA483 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +58,15 @@
 		EA1D3D39280D9DC100CAA483 /* TWeather2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TWeather2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA1D3D3D280D9DC100CAA483 /* TWeather2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWeather2UITests.swift; sourceTree = "<group>"; };
 		EA1D3D3F280D9DC100CAA483 /* TWeather2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWeather2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EA1D3D4E280DA58500CAA483 /* ForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastView.swift; sourceTree = "<group>"; };
+		EA1D3D52280DA5CB00CAA483 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
+		EA1D3D54280DA5DA00CAA483 /* ForecastVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastVM.swift; sourceTree = "<group>"; };
+		EA1D3D56280DA60100CAA483 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		EA1D3D58280DA63400CAA483 /* MainViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewExt.swift; sourceTree = "<group>"; };
+		EA1D3D5A280DA64900CAA483 /* ForecastViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewExt.swift; sourceTree = "<group>"; };
+		EA1D3D5C280DAB2E00CAA483 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		EA1D3D5E280DAB4200CAA483 /* InfoViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewExt.swift; sourceTree = "<group>"; };
+		EA1D3D60280DAB5100CAA483 /* InfoVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +117,10 @@
 		EA1D3D18280D9DBD00CAA483 /* TWeather2 */ = {
 			isa = PBXGroup;
 			children = (
-				EA1D3D19280D9DBD00CAA483 /* AppDelegate.swift */,
-				EA1D3D1B280D9DBD00CAA483 /* SceneDelegate.swift */,
-				EA1D3D1D280D9DBD00CAA483 /* ViewController.swift */,
-				EA1D3D1F280D9DBD00CAA483 /* Main.storyboard */,
+				EA1D3D51280DA5AB00CAA483 /* View Models */,
+				EA1D3D50280DA58B00CAA483 /* Models */,
+				EA1D3D4D280DA56800CAA483 /* AppScene */,
+				EA1D3D4C280DA3BF00CAA483 /* Views */,
 				EA1D3D25280D9DC000CAA483 /* Assets.xcassets */,
 				EA1D3D27280D9DC000CAA483 /* LaunchScreen.storyboard */,
 				EA1D3D2A280D9DC000CAA483 /* Info.plist */,
@@ -128,6 +144,46 @@
 				EA1D3D3F280D9DC100CAA483 /* TWeather2UITestsLaunchTests.swift */,
 			);
 			path = TWeather2UITests;
+			sourceTree = "<group>";
+		};
+		EA1D3D4C280DA3BF00CAA483 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA1D3D1D280D9DBD00CAA483 /* MainView.swift */,
+				EA1D3D58280DA63400CAA483 /* MainViewExt.swift */,
+				EA1D3D4E280DA58500CAA483 /* ForecastView.swift */,
+				EA1D3D5A280DA64900CAA483 /* ForecastViewExt.swift */,
+				EA1D3D5C280DAB2E00CAA483 /* InfoView.swift */,
+				EA1D3D5E280DAB4200CAA483 /* InfoViewExt.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EA1D3D4D280DA56800CAA483 /* AppScene */ = {
+			isa = PBXGroup;
+			children = (
+				EA1D3D19280D9DBD00CAA483 /* AppDelegate.swift */,
+				EA1D3D1B280D9DBD00CAA483 /* SceneDelegate.swift */,
+			);
+			path = AppScene;
+			sourceTree = "<group>";
+		};
+		EA1D3D50280DA58B00CAA483 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA1D3D56280DA60100CAA483 /* WeatherModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EA1D3D51280DA5AB00CAA483 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA1D3D52280DA5CB00CAA483 /* MainVM.swift */,
+				EA1D3D54280DA5DA00CAA483 /* ForecastVM.swift */,
+				EA1D3D60280DAB5100CAA483 /* InfoVM.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +292,6 @@
 			files = (
 				EA1D3D29280D9DC000CAA483 /* LaunchScreen.storyboard in Resources */,
 				EA1D3D26280D9DC000CAA483 /* Assets.xcassets in Resources */,
-				EA1D3D21280D9DBD00CAA483 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +317,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA1D3D24280D9DBD00CAA483 /* TWeather2.xcdatamodeld in Sources */,
-				EA1D3D1E280D9DBD00CAA483 /* ViewController.swift in Sources */,
+				EA1D3D5D280DAB2E00CAA483 /* InfoView.swift in Sources */,
+				EA1D3D5B280DA64900CAA483 /* ForecastViewExt.swift in Sources */,
+				EA1D3D53280DA5CB00CAA483 /* MainVM.swift in Sources */,
+				EA1D3D4F280DA58500CAA483 /* ForecastView.swift in Sources */,
+				EA1D3D1E280D9DBD00CAA483 /* MainView.swift in Sources */,
 				EA1D3D1A280D9DBD00CAA483 /* AppDelegate.swift in Sources */,
+				EA1D3D59280DA63400CAA483 /* MainViewExt.swift in Sources */,
+				EA1D3D5F280DAB4200CAA483 /* InfoViewExt.swift in Sources */,
+				EA1D3D55280DA5DA00CAA483 /* ForecastVM.swift in Sources */,
+				EA1D3D61280DAB5100CAA483 /* InfoVM.swift in Sources */,
 				EA1D3D1C280D9DBD00CAA483 /* SceneDelegate.swift in Sources */,
+				EA1D3D57280DA60100CAA483 /* WeatherModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +365,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EA1D3D1F280D9DBD00CAA483 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EA1D3D20280D9DBD00CAA483 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EA1D3D27280D9DC000CAA483 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -448,7 +504,7 @@
 				INFOPLIST_FILE = TWeather2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -476,7 +532,7 @@
 				INFOPLIST_FILE = TWeather2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
