@@ -15,3 +15,55 @@ extension ForecastView{
         forecastLabel.font = UIFont.systemFont(ofSize: 40, weight: .bold)
     }
 }
+
+extension ForecastView: UITableViewDelegate, UITableViewDataSource{
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 39
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! ForecastCell
+        if dataGlobal != nil{
+        let timeTrue = forecastVM.timeFormater(indexPath: indexPath, dataGlobal: dataGlobal)
+        let dateTrue = forecastVM.dateFormatter(indexPath: indexPath, globalData: dataGlobal)
+        cell.dateLabel.text = dateTrue
+        cell.timeLabel.text = timeTrue
+        cell.tempLabel.text = Int(round(dataGlobal.list[indexPath.row].main.temp - 273)).description + "°C"
+        cell.conditionLabel.text = dataGlobal.list[indexPath.row].weather.first?.description
+        
+        switch dataGlobal.list[indexPath.row].weather.last!.id {
+        case 200...232:
+            cell.conditionIW.image = UIImage(systemName: "tropicalstorm")
+        case 300...321:
+           cell.conditionIW.image = UIImage(systemName: "cloud.drizzle")
+        case 500...531:
+            cell.conditionIW.image = UIImage(systemName: "cloud.rain")
+        case 600...622:
+            cell.conditionIW.image = UIImage(systemName: "snow")
+        case 701...781:
+            cell.conditionIW.image = UIImage(systemName: "cloud.fog")
+        case 800:
+            cell.conditionIW.image = UIImage(systemName: "sun.min")
+        case 801...804:
+            cell.conditionIW.image = UIImage(systemName: "cloud")
+        default:
+            cell.conditionIW.image = UIImage(systemName: "questionmark")
+        }
+        }else{
+            print("nil data global")
+            //alert
+        }
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 85
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "5 days"
+    }
+    
+}

@@ -25,6 +25,9 @@
 		EA1D3D5D280DAB2E00CAA483 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D5C280DAB2E00CAA483 /* InfoView.swift */; };
 		EA1D3D5F280DAB4200CAA483 /* InfoViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D5E280DAB4200CAA483 /* InfoViewExt.swift */; };
 		EA1D3D61280DAB5100CAA483 /* InfoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D60280DAB5100CAA483 /* InfoVM.swift */; };
+		EA1D3D65280F22A900CAA483 /* ForecastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1D3D64280F22A900CAA483 /* ForecastCell.xib */; };
+		EA1D3D68280F285300CAA483 /* ForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D67280F285300CAA483 /* ForecastCell.swift */; };
+		EA1D3D6B280F39F200CAA483 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D6A280F39F200CAA483 /* Networking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		EA1D3D5C280DAB2E00CAA483 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		EA1D3D5E280DAB4200CAA483 /* InfoViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewExt.swift; sourceTree = "<group>"; };
 		EA1D3D60280DAB5100CAA483 /* InfoVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVM.swift; sourceTree = "<group>"; };
+		EA1D3D64280F22A900CAA483 /* ForecastCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForecastCell.xib; sourceTree = "<group>"; };
+		EA1D3D67280F285300CAA483 /* ForecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCell.swift; sourceTree = "<group>"; };
+		EA1D3D6A280F39F200CAA483 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,8 @@
 		EA1D3D18280D9DBD00CAA483 /* TWeather2 */ = {
 			isa = PBXGroup;
 			children = (
+				EA1D3D69280F39D300CAA483 /* Networking */,
+				EA1D3D66280F283700CAA483 /* Cell */,
 				EA1D3D51280DA5AB00CAA483 /* View Models */,
 				EA1D3D50280DA58B00CAA483 /* Models */,
 				EA1D3D4D280DA56800CAA483 /* AppScene */,
@@ -184,6 +192,31 @@
 				EA1D3D60280DAB5100CAA483 /* InfoVM.swift */,
 			);
 			path = "View Models";
+			sourceTree = "<group>";
+		};
+		EA1D3D63280F227300CAA483 /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				EA1D3D64280F22A900CAA483 /* ForecastCell.xib */,
+			);
+			path = xib;
+			sourceTree = "<group>";
+		};
+		EA1D3D66280F283700CAA483 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EA1D3D63280F227300CAA483 /* xib */,
+				EA1D3D67280F285300CAA483 /* ForecastCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EA1D3D69280F39D300CAA483 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EA1D3D6A280F39F200CAA483 /* Networking.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA1D3D29280D9DC000CAA483 /* LaunchScreen.storyboard in Resources */,
+				EA1D3D65280F22A900CAA483 /* ForecastCell.xib in Resources */,
 				EA1D3D26280D9DC000CAA483 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,7 +354,9 @@
 				EA1D3D5D280DAB2E00CAA483 /* InfoView.swift in Sources */,
 				EA1D3D5B280DA64900CAA483 /* ForecastViewExt.swift in Sources */,
 				EA1D3D53280DA5CB00CAA483 /* MainVM.swift in Sources */,
+				EA1D3D68280F285300CAA483 /* ForecastCell.swift in Sources */,
 				EA1D3D4F280DA58500CAA483 /* ForecastView.swift in Sources */,
+				EA1D3D6B280F39F200CAA483 /* Networking.swift in Sources */,
 				EA1D3D1E280D9DBD00CAA483 /* MainView.swift in Sources */,
 				EA1D3D1A280D9DBD00CAA483 /* AppDelegate.swift in Sources */,
 				EA1D3D59280DA63400CAA483 /* MainViewExt.swift in Sources */,

@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+//
 extension MainView{
     
     func setUpForecastBtn(){
@@ -43,7 +45,7 @@ extension MainView{
     }
     
     func setUpConditionIW(){
-        conditionIW.image = UIImage(systemName: "questionmark")
+        conditionIW.image = UIImage(systemName: "questionmark.circle")
         conditionIW.tintColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1)
     }
     
@@ -87,3 +89,42 @@ extension MainView{
         conditionLabel.textAlignment = .center
     }
 }
+
+
+
+extension MainView: NetworkingDelegate{
+    func updateInterface(_: Networking, with weatherData: WeatherData) {
+        print("Ok2")
+         DispatchQueue.main.async {
+             self.countryLabel.text = weatherData.city.country
+             self.cityLabel.text = weatherData.city.name
+             self.conditionLabel.text = weatherData.list.first!.weather.last?.description
+             self.tempLabel.text = Int(round(weatherData.list.first!.main.temp - 273)).description + "°C"
+
+             switch weatherData.list.first!.weather.last!.id {
+             case 200...232:
+                 self.conditionIW.image = UIImage(systemName: "tropicalstorm")
+             case 300...321:
+                 self.conditionIW.image = UIImage(systemName: "cloud.drizzle")
+             case 500...531:
+                 self.conditionIW.image = UIImage(systemName: "cloud.rain")
+             case 600...622:
+                 self.conditionIW.image = UIImage(systemName: "snow")
+             case 701...781:
+                 self.conditionIW.image = UIImage(systemName: "cloud.fog")
+             case 800:
+                 self.conditionIW.image = UIImage(systemName: "sun.min")
+             case 801...804:
+                 self.conditionIW.image = UIImage(systemName: "cloud")
+             default:
+                 self.conditionIW.image = UIImage(systemName: "questionmark")
+             }
+         }
+    }
+
+
+}
+
+
+
+

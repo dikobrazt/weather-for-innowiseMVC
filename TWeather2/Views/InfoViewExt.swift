@@ -12,7 +12,7 @@ import UIKit
 extension InfoView{
     
     func setUpInfoLabel(){
-        infoLabel.text = "Info"
+        infoLabel.text = "Detailed info"
         infoLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         infoLabel.font = UIFont.systemFont(ofSize: 40, weight: .bold)
 
@@ -65,4 +65,25 @@ extension InfoView{
         tempMaxLabel.font = UIFont.systemFont(ofSize: 20, weight: .medium)
         tempMaxLabel.textAlignment = .center
     }
+    
+    
+}
+
+
+//MARK: - UPD Interface ext
+extension InfoView{
+    
+    func updateInterface(weatherData: WeatherData){
+        if dataGlobal != nil {
+        DispatchQueue.main.async{
+            self.windLabel.text = weatherData.list.first!.wind.speed.description + " m/s"
+            self.humidityLabel.text = weatherData.list.first!.main.humidity.description
+            self.tempMaxLabel.text = Int(round(weatherData.list.first!.main.temp_max - 273)).description
+            self.pressureLabel.text = weatherData.list.first!.main.pressure.description
+        }
+    }else{
+      print("data globbal nil")
+      //alert
+   }
+  }
 }

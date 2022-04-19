@@ -7,8 +7,12 @@
 
 import UIKit
 
+
+
 class MainView: UIViewController {
     
+    var mainVM = MainVM()
+    var net = Networking()
     let forecastBtn = UIButton()
     let infoBtn = UIButton()
     let mainLabel = UILabel()
@@ -33,6 +37,10 @@ class MainView: UIViewController {
         view.addSubview(tempLabel)
         view.addSubview(cityLabel)
         view.addSubview(conditionLabel)
+        mainVM.startLM()
+        
+        net.delegate = self
+      
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,7 +66,7 @@ class MainView: UIViewController {
         
         conditionIW.frame = .init(x: 0, y: 0, width: 150, height: 150)
         conditionIW.center.x = view.center.x
-        conditionIW.center.y = view.center.y - 50
+        conditionIW.center.y = view.center.y - 30
         
         infoBtn.frame = .init(x: 0, y: 620, width: 150, height: 50)
         infoBtn.center.x = view.center.x
@@ -75,4 +83,7 @@ class MainView: UIViewController {
     
 
 }
+
+
+
 

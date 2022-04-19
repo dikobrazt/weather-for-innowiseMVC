@@ -32,6 +32,7 @@ class InfoView: UIViewController{
         view.addSubview(pressureLabel)
         view.addSubview(tempMaxIW)
         view.addSubview(tempMaxLabel)
+        
 
     }
     
@@ -46,6 +47,7 @@ class InfoView: UIViewController{
         setUpPressureLabel()
         setUpTempMaxIW()
         setUpTempMaxLabel()
+        updateInterface(weatherData: dataGlobal)
         
 //        frames
         
