@@ -17,6 +17,17 @@ extension MainView{
         forecastBtn.setTitleColor(.white, for: .normal)
     }
     
+    @objc func goToForecastView(){
+        let forecastView = ForecastView()
+        if let forecastCardView = forecastView.sheetPresentationController{
+            forecastCardView.detents = [.large()]
+            forecastCardView.prefersGrabberVisible = true
+            forecastCardView.preferredCornerRadius = 25
+            //разобраться со всем свойствами
+        }
+        present(forecastView, animated: true, completion: nil)
+    }
+    
     func setUpMainLabel(){
         mainLabel.text = "TWeather"
         mainLabel.textColor = .black
@@ -33,7 +44,7 @@ extension MainView{
     
     func setUpConditionIW(){
         conditionIW.image = UIImage(systemName: "questionmark")
-        conditionIW.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        conditionIW.tintColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1)
     }
     
     func setUpInfoBtn(){
@@ -44,17 +55,35 @@ extension MainView{
         infoBtn.setTitleColor(.black, for: .normal)
     }
     
+    @objc func goToInfoView(){
+        let infoView = InfoView()
+        
+        if let infoCardView = infoView.sheetPresentationController{
+            infoCardView.detents = [.medium()]
+            infoCardView.prefersGrabberVisible = true
+            infoCardView.preferredCornerRadius = 25
+            }
+        self.present(infoView, animated: true, completion: nil)
+    }
+    
     func setUpCityLabel(){
-        cityLabel.text = "City ffffffffff"
+        cityLabel.text = "--city--"
         cityLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         cityLabel.font = UIFont.systemFont(ofSize: 35, weight: .bold)
         cityLabel.textAlignment = .center
     }
     
     func setUpTempLabel(){
-        tempLabel.text = "40uu"
+        tempLabel.text = "--temp--"
         tempLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        tempLabel.font = UIFont.systemFont(ofSize: 40, weight: .bold)
+        tempLabel.font = UIFont.systemFont(ofSize: 40, weight: .regular)
         tempLabel.textAlignment = .center
+    }
+    
+    func setUpConditionLabel(){
+        conditionLabel.text = "--conditon--"
+        conditionLabel.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        conditionLabel.font = UIFont.systemFont(ofSize: 25, weight: .bold)
+        conditionLabel.textAlignment = .center
     }
 }
