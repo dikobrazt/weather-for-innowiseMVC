@@ -11,15 +11,10 @@ import UIKit
 
 class ForecastCell: UITableViewCell{
     
-    
     @IBOutlet weak var timeLabel: UILabel!
-    
     @IBOutlet weak var dateLabel: UILabel!
-    
     @IBOutlet weak var tempLabel: UILabel!
-    
     @IBOutlet weak var conditionLabel: UILabel!
-    
     @IBOutlet weak var conditionIW: UIImageView!
     
     

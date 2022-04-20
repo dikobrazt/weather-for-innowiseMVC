@@ -127,7 +127,6 @@
 				EA1D3D66280F283700CAA483 /* Cell */,
 				EA1D3D51280DA5AB00CAA483 /* View Models */,
 				EA1D3D50280DA58B00CAA483 /* Models */,
-				EA1D3D4D280DA56800CAA483 /* AppScene */,
 				EA1D3D4C280DA3BF00CAA483 /* Views */,
 				EA1D3D25280D9DC000CAA483 /* Assets.xcassets */,
 				EA1D3D27280D9DC000CAA483 /* LaunchScreen.storyboard */,
@@ -180,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				EA1D3D56280DA60100CAA483 /* WeatherModel.swift */,
+				EA1D3D4D280DA56800CAA483 /* AppScene */,
 			);
 			path = Models;
 			sourceTree = "<group>";

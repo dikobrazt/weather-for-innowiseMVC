@@ -70,20 +70,16 @@ extension InfoView{
 }
 
 
+
 //MARK: - UPD Interface ext
 extension InfoView{
     
     func updateInterface(weatherData: WeatherData){
-        if dataGlobal != nil {
         DispatchQueue.main.async{
-            self.windLabel.text = weatherData.list.first!.wind.speed.description + " m/s"
-            self.humidityLabel.text = weatherData.list.first!.main.humidity.description
-            self.tempMaxLabel.text = Int(round(weatherData.list.first!.main.temp_max - 273)).description
-            self.pressureLabel.text = weatherData.list.first!.main.pressure.description
+            self.windLabel.text = (weatherData.list.first?.wind.speed.description ?? "--wind--") + " m/s"
+            self.humidityLabel.text = (weatherData.list.first?.main.humidity.description ?? "--humidity--")
+            self.tempMaxLabel.text = Int(round((weatherData.list.first?.main.temp_max ?? 0) - 273)).description
+            self.pressureLabel.text = (weatherData.list.first?.main.pressure ?? 0).description
         }
-    }else{
-      print("data globbal nil")
-      //alert
-   }
-  }
+    }
 }

@@ -11,7 +11,7 @@ import UIKit
 
 class MainView: UIViewController {
     
-    var mainVM = MainVM()
+//MARK: - Declaration
     var net = Networking()
     let forecastBtn = UIButton()
     let infoBtn = UIButton()
@@ -22,9 +22,13 @@ class MainView: UIViewController {
     let cityLabel = UILabel()
     let conditionLabel = UILabel()
 
+    
+    
+//MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        
         view.addSubview(forecastBtn)
         forecastBtn.addTarget(self, action: #selector(goToForecastView), for: .touchUpInside)
         
@@ -37,12 +41,15 @@ class MainView: UIViewController {
         view.addSubview(tempLabel)
         view.addSubview(cityLabel)
         view.addSubview(conditionLabel)
-        mainVM.startLM()
-        
+       
+        net.startLM()
         net.delegate = self
       
     }
     
+    
+    
+//MARK: - viewWillAppear
     override func viewWillAppear(_ animated: Bool) {
 
 //        set up funcs

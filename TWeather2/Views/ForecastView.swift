@@ -7,30 +7,35 @@
 
 import UIKit
 
+
+
 class ForecastView: UIViewController {
     
+//MARK: - Declaration
     let cellID: String = "cellID"
     let forecastLabel = UILabel()
-   // let forecastTableView = UITableView(frame: CGRect.zero, style: .insetGrouped)
     let forecastTableView = UITableView()
     var safeArea: UILayoutGuide!
     var forecastVM = ForecastVM()
     
+//MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        
         view.addSubview(forecastLabel)
         view.addSubview(forecastTableView)
         forecastTableView.register(UINib(nibName: "ForecastCell", bundle: nil), forCellReuseIdentifier: cellID)
+        
         forecastTableView.dataSource = self
         forecastTableView.delegate = self
     }
     
+//MARK: - viewWillAppear
     override func viewWillAppear(_ animated: Bool) {
 //        funcs
         setUpForecastLabel()
        
-        
 //        frames
         forecastLabel.frame = .init(x: 20, y: 35, width: 300, height: 50)
         

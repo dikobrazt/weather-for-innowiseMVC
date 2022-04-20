@@ -8,15 +8,18 @@
 import UIKit
 
 
-//
+
 extension MainView{
     
     func setUpForecastBtn(){
         forecastBtn.setTitle("Forecast", for: .normal)
+        forecastBtn.setTitle("Try later...", for: .disabled)
         forecastBtn.backgroundColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1)
         forecastBtn.layer.cornerRadius = 15
         forecastBtn.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .bold)
         forecastBtn.setTitleColor(.white, for: .normal)
+        
+        forecastBtn.isEnabled = false
     }
     
     @objc func goToForecastView(){
@@ -25,7 +28,6 @@ extension MainView{
             forecastCardView.detents = [.large()]
             forecastCardView.prefersGrabberVisible = true
             forecastCardView.preferredCornerRadius = 25
-            //разобраться со всем свойствами
         }
         present(forecastView, animated: true, completion: nil)
     }
@@ -51,10 +53,12 @@ extension MainView{
     
     func setUpInfoBtn(){
         infoBtn.setTitle("More info", for: .normal)
+        infoBtn.setTitle("Try later...", for: .disabled)
         infoBtn.backgroundColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1)
         infoBtn.layer.cornerRadius = 25
         infoBtn.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .regular)
-        infoBtn.setTitleColor(.black, for: .normal)
+        infoBtn.setTitleColor(.white, for: .normal)
+        infoBtn.isEnabled = false
     }
     
     @objc func goToInfoView(){
@@ -91,17 +95,16 @@ extension MainView{
 }
 
 
-
+//MARK: - Networking delegate
 extension MainView: NetworkingDelegate{
     func updateInterface(_: Networking, with weatherData: WeatherData) {
-        print("Ok2")
-         DispatchQueue.main.async {
+        DispatchQueue.main.async {
              self.countryLabel.text = weatherData.city.country
              self.cityLabel.text = weatherData.city.name
              self.conditionLabel.text = weatherData.list.first!.weather.last?.description
              self.tempLabel.text = Int(round(weatherData.list.first!.main.temp - 273)).description + "°C"
-
-             switch weatherData.list.first!.weather.last!.id {
+             if var imageNum = weatherData.list.first!.weather.last!.id {
+             switch imageNum {
              case 200...232:
                  self.conditionIW.image = UIImage(systemName: "tropicalstorm")
              case 300...321:
@@ -119,11 +122,31 @@ extension MainView: NetworkingDelegate{
              default:
                  self.conditionIW.image = UIImage(systemName: "questionmark")
              }
+             }else{
+                 print("FF")
+             }
          }
     }
-
-
+    
+    
+    
+//MARK: - Set Up Alert
+    func setUpAlert(errorDescription: String) {
+        DispatchQueue.main.async {
+            let alertVC = UIAlertController(title: "Problems again(", message: errorDescription, preferredStyle: .actionSheet)
+            alertVC.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.destructive, handler: nil))
+            alertVC.addAction(UIAlertAction(title: "Settings", style:
+            UIAlertAction.Style.cancel, handler: { action in
+                
+            UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
+            }))
+            
+            self.present(alertVC, animated: true, completion: nil)
+        }
+    }
 }
+
+
 
 
 

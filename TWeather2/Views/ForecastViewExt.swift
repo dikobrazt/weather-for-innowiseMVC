@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+
 extension ForecastView{
     
     func setUpForecastLabel(){
@@ -16,6 +18,9 @@ extension ForecastView{
     }
 }
 
+
+
+//MARK: - Table view protocols
 extension ForecastView: UITableViewDelegate, UITableViewDataSource{
     
     
@@ -25,7 +30,6 @@ extension ForecastView: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! ForecastCell
-        if dataGlobal != nil{
         let timeTrue = forecastVM.timeFormater(indexPath: indexPath, dataGlobal: dataGlobal)
         let dateTrue = forecastVM.dateFormatter(indexPath: indexPath, globalData: dataGlobal)
         cell.dateLabel.text = dateTrue
@@ -33,7 +37,8 @@ extension ForecastView: UITableViewDelegate, UITableViewDataSource{
         cell.tempLabel.text = Int(round(dataGlobal.list[indexPath.row].main.temp - 273)).description + "°C"
         cell.conditionLabel.text = dataGlobal.list[indexPath.row].weather.first?.description
         
-        switch dataGlobal.list[indexPath.row].weather.last!.id {
+        if var imageNum = dataGlobal.list[indexPath.row].weather.last!.id{
+        switch imageNum {
         case 200...232:
             cell.conditionIW.image = UIImage(systemName: "tropicalstorm")
         case 300...321:
@@ -52,8 +57,7 @@ extension ForecastView: UITableViewDelegate, UITableViewDataSource{
             cell.conditionIW.image = UIImage(systemName: "questionmark")
         }
         }else{
-            print("nil data global")
-            //alert
+            print("FF")
         }
         return cell
     }

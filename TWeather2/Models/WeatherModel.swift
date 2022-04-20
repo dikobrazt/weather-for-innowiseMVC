@@ -10,11 +10,11 @@ import Foundation
 
 
 struct Weather: Codable{
-    var id: Int
-    var main: String
-    var description: String
+    var id: Int?
+    var main: String?
+    var description: String?
 }
-// добавить два параматра рассвет и закат время
+
 struct Main: Codable{
     var temp: Double = 0.0
     var temp_min: Double = 0.0
@@ -34,7 +34,7 @@ struct City: Codable{
     var country: String = " "
 }
 
-//MARK: - Main struct
+
 struct List: Codable {
     var weather:[Weather] = []
     var main: Main = Main()
@@ -43,6 +43,9 @@ struct List: Codable {
     
 }
 
+
+
+//MARK: - Main struct
 struct WeatherData: Codable{
     var list: [List] = []
     var city: City = City()

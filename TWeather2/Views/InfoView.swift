@@ -7,8 +7,11 @@
 
 import UIKit
 
+
+
 class InfoView: UIViewController{
     
+//MARK: - Declaration
     let infoLabel = UILabel()
     let windIW = UIImageView()
     let windLabel = UILabel()
@@ -19,10 +22,11 @@ class InfoView: UIViewController{
     let tempMaxIW = UIImageView()
     let tempMaxLabel = UILabel()
     
-    
+//MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        
         view.addSubview(infoLabel)
         view.addSubview(windIW)
         view.addSubview(windLabel)
@@ -32,10 +36,9 @@ class InfoView: UIViewController{
         view.addSubview(pressureLabel)
         view.addSubview(tempMaxIW)
         view.addSubview(tempMaxLabel)
-        
-
     }
     
+//MARK: - viewWillAppear
     override func viewWillAppear(_ animated: Bool) {
 //        funcs
         setUpInfoLabel()
@@ -50,7 +53,6 @@ class InfoView: UIViewController{
         updateInterface(weatherData: dataGlobal)
         
 //        frames
-        
         infoLabel.frame = .init(x: 20, y: 35, width: 300, height: 50)
         
         windIW.frame = .init(x: 0, y: 120, width: 40, height: 40)
