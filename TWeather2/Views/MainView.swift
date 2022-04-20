@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  TWeather2
 
-//  Created by Vladislav Tuleiko on 18.04.22.
-//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 token githuubb
+//   Created by Vladislav Tuleiko on 18.04.22.
+
 
 import UIKit
 
