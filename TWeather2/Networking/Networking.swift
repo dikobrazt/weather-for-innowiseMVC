@@ -3,7 +3,7 @@
 //  TWeather2
 //
 //  Created by Vladislav Tuleiko on 19.04.22.
-//
+
 
 import Foundation
 import CoreLocation
