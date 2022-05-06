@@ -16,19 +16,27 @@ class ForecastView: UIViewController {
     let forecastLabel = UILabel()
     let forecastTableView = UITableView()
     var safeArea: UILayoutGuide!
-    var forecastVM = ForecastVM()
+    var net: Networking = Networking()
+    var forecastVM: ForecastVMProtocol?{
+        didSet{
+            
+        }
+    }
     
 //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        //addSubviews
         view.backgroundColor = .white
-        
         view.addSubview(forecastLabel)
         view.addSubview(forecastTableView)
+        //registerCell
         forecastTableView.register(UINib(nibName: "ForecastCell", bundle: nil), forCellReuseIdentifier: cellID)
-        
+        //tableViewProtocols
         forecastTableView.dataSource = self
         forecastTableView.delegate = self
+        
+        
     }
     
 //MARK: - viewWillAppear
@@ -44,5 +52,5 @@ class ForecastView: UIViewController {
         forecastTableView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         self.forecastTableView.heightAnchor.constraint(equalToConstant: 600).isActive = true
         self.forecastTableView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-}
+   }
 }

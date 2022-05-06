@@ -9,25 +9,64 @@ import Foundation
 
 
 
-class ForecastVM{
+class ForecastVM: ForecastVMProtocol{
     
-    func timeFormater (indexPath: IndexPath, dataGlobal: WeatherData) -> String {
-      
-        let date: String = dataGlobal.list[indexPath.row].dt_txt
-        let start = date.index(date.startIndex, offsetBy: 11)
-        let end = date.index(date.startIndex, offsetBy: 16)
-        let range = start..<end
-            return String(date[range])
-     
+    init(data: MainModel) {
+        self.mainModel = data
     }
     
-    func dateFormatter(indexPath: IndexPath, globalData: WeatherData) -> String {
+    
+    
+    
+    var weatherDatas = WeatherData()
+    var mainModel: MainModel
+    var net: Networking = Networking()
+    
+    func numberOfRows() -> Int {
+        return 39
+    }
+    
+    func forecastCellViewModel(forIndexPath indexPath: IndexPath) -> ForecastCellVMProtocol? {
+        //данные сраные
+
+        return ForecastCellVM(weatherData: mainModel)
+    }
+    
+
+    
+   
+
+    
  
-        let date: String = dataGlobal.list[indexPath.row].dt_txt
-        let start = date.index(date.startIndex, offsetBy: 0)
-        let end = date.index(date.endIndex, offsetBy: -9)
-        let range = start..<end
-        return String(date[range])
-      
-}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+//    func timeFormater (indexPath: IndexPath, dataGlobal: WeatherData) -> String {
+//
+//        let date: String = dataGlobal.list[indexPath.row].dt_txt
+//        let start = date.index(date.startIndex, offsetBy: 11)
+//        let end = date.index(date.startIndex, offsetBy: 16)
+//        let range = start..<end
+//            return String(date[range])
+//
+//    }
+//
+//    func dateFormatter(indexPath: IndexPath, globalData: WeatherData) -> String {
+//
+//        let date: String = dataGlobal.list[indexPath.row].dt_txt
+//        let start = date.index(date.startIndex, offsetBy: 0)
+//        let end = date.index(date.endIndex, offsetBy: -9)
+//        let range = start..<end
+//        return String(date[range])
+//
+//}
 }

@@ -6,13 +6,14 @@
 
 
 import UIKit
+//import SnapKit
 
 
 
 class MainView: UIViewController {
     
 //MARK: - Declaration
-    var net = Networking()
+    //weak var delegate: MainViewDelegate?
     let forecastBtn = UIButton()
     let infoBtn = UIButton()
     let mainLabel = UILabel()
@@ -21,37 +22,45 @@ class MainView: UIViewController {
     let tempLabel = UILabel()
     let cityLabel = UILabel()
     let conditionLabel = UILabel()
-
+    var mainVM: MainVM? = MainVM()
+    
+    var completionHandler: ((String) -> Void)?
+    
+    
+   
+    
     
     
 //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        
-        view.addSubview(forecastBtn)
-        forecastBtn.addTarget(self, action: #selector(goToForecastView), for: .touchUpInside)
-        
-        view.addSubview(infoBtn)
-        infoBtn.addTarget(self, action: #selector(goToInfoView), for: .touchUpInside)
-        
+       //addSubview
+        view.backgroundColor = .white
         view.addSubview(mainLabel)
         view.addSubview(countryLabel)
         view.addSubview(conditionIW)
         view.addSubview(tempLabel)
         view.addSubview(cityLabel)
         view.addSubview(conditionLabel)
-       
-        net.startLM()
-        net.delegate = self
-      
+        view.addSubview(forecastBtn)
+        //addTarget
+        forecastBtn.addTarget(self, action: #selector(goToForecastView), for: .touchUpInside)
+        view.addSubview(infoBtn)
+        infoBtn.addTarget(self, action: #selector(goToInfoView), for: .touchUpInside)
+        //print(mainVM?.weather1)
     }
     
     
     
 //MARK: - viewWillAppear
     override func viewWillAppear(_ animated: Bool) {
-
+        mainVM?.getWeather()
+        mainVM?.weather.bind{ [unowned self] in
+            guard $0 != nil else {return}
+            //здесь обновление интерыейса епта
+            guard mainVM != nil else {return}
+            updateInterface(with: mainVM!)
+        }
 //        set up funcs
         setUpForecastBtn()
         setUpMainLabel()
@@ -62,12 +71,18 @@ class MainView: UIViewController {
         setUpTempLabel()
         setUpConditionLabel()
         
-//        frames
-        mainLabel.frame = .init(x: 0, y: 50, width: 200, height: 50)
-        mainLabel.center.x = view.center.x
+//       setUpUIElements
+//        mainLabel.snp.makeConstraints { maker in
+//            maker.centerX.equalToSuperview()
+//            maker.top.equalToSuperview().inset(50)
+//        }
         
         forecastBtn.frame = .init(x: 0, y: 680, width: 200, height: 70)
         forecastBtn.center.x = view.center.x
+//        forecastBtn.snp.makeConstraints { make in
+//            make.centerX.equalToSuperview()
+//            make.top.equalToSuperview().inset(680)
+//        }
         
         countryLabel.frame = .init(x: 0, y: 50, width: 50, height: 50)
         
@@ -86,9 +101,8 @@ class MainView: UIViewController {
         
         conditionLabel.frame = .init(x: 0, y: 220, width: 300, height: 50)
         conditionLabel.center.x = view.center.x
-    }
-    
 
+    }
 }
 
 

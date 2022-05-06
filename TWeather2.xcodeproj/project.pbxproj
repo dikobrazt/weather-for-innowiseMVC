@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40FC9A557BF05E072074F315 /* Pods_TWeather2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A576911E267D06CB34C4BCB1 /* Pods_TWeather2Tests.framework */; };
+		54B19F94D49893D0DB290CB3 /* Pods_TWeather2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EA4705E031BA21AF1B68E57 /* Pods_TWeather2.framework */; };
+		C25D85D2E73CE9535D8AE9A2 /* Pods_TWeather2_TWeather2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 602FE39A3B7F3A3BA51C4D38 /* Pods_TWeather2_TWeather2UITests.framework */; };
 		EA1D3D1A280D9DBD00CAA483 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D19280D9DBD00CAA483 /* AppDelegate.swift */; };
 		EA1D3D1C280D9DBD00CAA483 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D1B280D9DBD00CAA483 /* SceneDelegate.swift */; };
 		EA1D3D1E280D9DBD00CAA483 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D1D280D9DBD00CAA483 /* MainView.swift */; };
 		EA1D3D24280D9DBD00CAA483 /* TWeather2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D22280D9DBD00CAA483 /* TWeather2.xcdatamodeld */; };
 		EA1D3D26280D9DC000CAA483 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA1D3D25280D9DC000CAA483 /* Assets.xcassets */; };
 		EA1D3D29280D9DC000CAA483 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1D3D27280D9DC000CAA483 /* LaunchScreen.storyboard */; };
-		EA1D3D34280D9DC100CAA483 /* TWeather2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D33280D9DC100CAA483 /* TWeather2Tests.swift */; };
-		EA1D3D3E280D9DC100CAA483 /* TWeather2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D3D280D9DC100CAA483 /* TWeather2UITests.swift */; };
-		EA1D3D40280D9DC100CAA483 /* TWeather2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D3F280D9DC100CAA483 /* TWeather2UITestsLaunchTests.swift */; };
 		EA1D3D4F280DA58500CAA483 /* ForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D4E280DA58500CAA483 /* ForecastView.swift */; };
 		EA1D3D53280DA5CB00CAA483 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D52280DA5CB00CAA483 /* MainVM.swift */; };
 		EA1D3D55280DA5DA00CAA483 /* ForecastVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D54280DA5DA00CAA483 /* ForecastVM.swift */; };
@@ -28,6 +28,19 @@
 		EA1D3D65280F22A900CAA483 /* ForecastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1D3D64280F22A900CAA483 /* ForecastCell.xib */; };
 		EA1D3D68280F285300CAA483 /* ForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D67280F285300CAA483 /* ForecastCell.swift */; };
 		EA1D3D6B280F39F200CAA483 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D6A280F39F200CAA483 /* Networking.swift */; };
+		EA373D5A2816CEE3001EAFD3 /* ForecastVMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA373D592816CEE3001EAFD3 /* ForecastVMProtocol.swift */; };
+		EA373D5C28186351001EAFD3 /* ForecastCellVMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA373D5B28186351001EAFD3 /* ForecastCellVMProtocol.swift */; };
+		EA373D5E28186468001EAFD3 /* ForecastCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA373D5D28186468001EAFD3 /* ForecastCellVM.swift */; };
+		EA7DF8DD2819D2C4008A4509 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7DF8DC2819D2C4008A4509 /* MainModel.swift */; };
+		EA7DF8DF281B2BDB008A4509 /* MainVMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7DF8DE281B2BDB008A4509 /* MainVMProtocol.swift */; };
+		EA7DF8E1281B30DE008A4509 /* NetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7DF8E0281B30DE008A4509 /* NetworkingProtocol.swift */; };
+		EA7DF8E3281BEA37008A4509 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7DF8E2281BEA37008A4509 /* LocationManager.swift */; };
+		EA7DF8E5281BEEB9008A4509 /* MainModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7DF8E4281BEEB9008A4509 /* MainModelProtocol.swift */; };
+		EA7DF8E72821BB6E008A4509 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7DF8E62821BB6E008A4509 /* Box.swift */; };
+		EA7DF8E92821D93E008A4509 /* InfoVMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7DF8E82821D93E008A4509 /* InfoVMProtocol.swift */; };
+		EA7DF8EB2824350B008A4509 /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7DF8EA2824350B008A4509 /* ForecastModel.swift */; };
+		EAFDCF8C282573D4003A628E /* ForecastModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDCF8B282573D4003A628E /* ForecastModelProtocol.swift */; };
+		EAFDCF932825B075003A628E /* ErrorDelegationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDCF922825B075003A628E /* ErrorDelegationProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +61,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CDDBC7D0B8A352B7DFF74E4 /* Pods-TWeather2-TWeather2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWeather2-TWeather2UITests.release.xcconfig"; path = "Target Support Files/Pods-TWeather2-TWeather2UITests/Pods-TWeather2-TWeather2UITests.release.xcconfig"; sourceTree = "<group>"; };
+		22120FA8ACCCB6CB1EE495E6 /* Pods-TWeather2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWeather2.debug.xcconfig"; path = "Target Support Files/Pods-TWeather2/Pods-TWeather2.debug.xcconfig"; sourceTree = "<group>"; };
+		32B11A835B79C55685D86DFF /* Pods-TWeather2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWeather2.release.xcconfig"; path = "Target Support Files/Pods-TWeather2/Pods-TWeather2.release.xcconfig"; sourceTree = "<group>"; };
+		44A6C0F754EE35931AED6B4F /* Pods-TWeather2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWeather2Tests.debug.xcconfig"; path = "Target Support Files/Pods-TWeather2Tests/Pods-TWeather2Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		602FE39A3B7F3A3BA51C4D38 /* Pods_TWeather2_TWeather2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TWeather2_TWeather2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		803FF734C8F4AECDD3799ADD /* Pods-TWeather2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWeather2Tests.release.xcconfig"; path = "Target Support Files/Pods-TWeather2Tests/Pods-TWeather2Tests.release.xcconfig"; sourceTree = "<group>"; };
+		9EA4705E031BA21AF1B68E57 /* Pods_TWeather2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TWeather2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A576911E267D06CB34C4BCB1 /* Pods_TWeather2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TWeather2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC42C213F580DD5BE500CE61 /* Pods-TWeather2-TWeather2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWeather2-TWeather2UITests.debug.xcconfig"; path = "Target Support Files/Pods-TWeather2-TWeather2UITests/Pods-TWeather2-TWeather2UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA1D3D16280D9DBD00CAA483 /* TWeather2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWeather2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA1D3D19280D9DBD00CAA483 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA1D3D1B280D9DBD00CAA483 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,10 +79,7 @@
 		EA1D3D28280D9DC000CAA483 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA1D3D2A280D9DC000CAA483 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA1D3D2F280D9DC100CAA483 /* TWeather2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TWeather2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA1D3D33280D9DC100CAA483 /* TWeather2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWeather2Tests.swift; sourceTree = "<group>"; };
 		EA1D3D39280D9DC100CAA483 /* TWeather2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TWeather2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA1D3D3D280D9DC100CAA483 /* TWeather2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWeather2UITests.swift; sourceTree = "<group>"; };
-		EA1D3D3F280D9DC100CAA483 /* TWeather2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWeather2UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EA1D3D4E280DA58500CAA483 /* ForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastView.swift; sourceTree = "<group>"; };
 		EA1D3D52280DA5CB00CAA483 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
 		EA1D3D54280DA5DA00CAA483 /* ForecastVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastVM.swift; sourceTree = "<group>"; };
@@ -73,6 +92,19 @@
 		EA1D3D64280F22A900CAA483 /* ForecastCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForecastCell.xib; sourceTree = "<group>"; };
 		EA1D3D67280F285300CAA483 /* ForecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCell.swift; sourceTree = "<group>"; };
 		EA1D3D6A280F39F200CAA483 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		EA373D592816CEE3001EAFD3 /* ForecastVMProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastVMProtocol.swift; sourceTree = "<group>"; };
+		EA373D5B28186351001EAFD3 /* ForecastCellVMProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCellVMProtocol.swift; sourceTree = "<group>"; };
+		EA373D5D28186468001EAFD3 /* ForecastCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCellVM.swift; sourceTree = "<group>"; };
+		EA7DF8DC2819D2C4008A4509 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		EA7DF8DE281B2BDB008A4509 /* MainVMProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVMProtocol.swift; sourceTree = "<group>"; };
+		EA7DF8E0281B30DE008A4509 /* NetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProtocol.swift; sourceTree = "<group>"; };
+		EA7DF8E2281BEA37008A4509 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		EA7DF8E4281BEEB9008A4509 /* MainModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModelProtocol.swift; sourceTree = "<group>"; };
+		EA7DF8E62821BB6E008A4509 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		EA7DF8E82821D93E008A4509 /* InfoVMProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVMProtocol.swift; sourceTree = "<group>"; };
+		EA7DF8EA2824350B008A4509 /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
+		EAFDCF8B282573D4003A628E /* ForecastModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModelProtocol.swift; sourceTree = "<group>"; };
+		EAFDCF922825B075003A628E /* ErrorDelegationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDelegationProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54B19F94D49893D0DB290CB3 /* Pods_TWeather2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40FC9A557BF05E072074F315 /* Pods_TWeather2Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,19 +128,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C25D85D2E73CE9535D8AE9A2 /* Pods_TWeather2_TWeather2UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F40D586425C4EF505D59195 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				22120FA8ACCCB6CB1EE495E6 /* Pods-TWeather2.debug.xcconfig */,
+				32B11A835B79C55685D86DFF /* Pods-TWeather2.release.xcconfig */,
+				BC42C213F580DD5BE500CE61 /* Pods-TWeather2-TWeather2UITests.debug.xcconfig */,
+				1CDDBC7D0B8A352B7DFF74E4 /* Pods-TWeather2-TWeather2UITests.release.xcconfig */,
+				44A6C0F754EE35931AED6B4F /* Pods-TWeather2Tests.debug.xcconfig */,
+				803FF734C8F4AECDD3799ADD /* Pods-TWeather2Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EA1D3D0D280D9DBD00CAA483 = {
 			isa = PBXGroup;
 			children = (
+				EA1D3D22280D9DBD00CAA483 /* TWeather2.xcdatamodeld */,
 				EA1D3D18280D9DBD00CAA483 /* TWeather2 */,
-				EA1D3D32280D9DC100CAA483 /* TWeather2Tests */,
-				EA1D3D3C280D9DC100CAA483 /* TWeather2UITests */,
 				EA1D3D17280D9DBD00CAA483 /* Products */,
+				9F40D586425C4EF505D59195 /* Pods */,
+				FB93A6D1C1615E48A73643A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,34 +172,20 @@
 		EA1D3D18280D9DBD00CAA483 /* TWeather2 */ = {
 			isa = PBXGroup;
 			children = (
-				EA1D3D69280F39D300CAA483 /* Networking */,
+				EA4B80EC2825BA5600A767D1 /* plist */,
+				EAFDCF912825B053003A628E /* Errors */,
+				EAFDCF8D2825AE11003A628E /* Binding */,
+				EA373D582816CDA3001EAFD3 /* Protocols */,
+				EA1D3D69280F39D300CAA483 /* Services */,
 				EA1D3D66280F283700CAA483 /* Cell */,
 				EA1D3D51280DA5AB00CAA483 /* View Models */,
 				EA1D3D50280DA58B00CAA483 /* Models */,
 				EA1D3D4C280DA3BF00CAA483 /* Views */,
-				EA1D3D25280D9DC000CAA483 /* Assets.xcassets */,
-				EA1D3D27280D9DC000CAA483 /* LaunchScreen.storyboard */,
-				EA1D3D2A280D9DC000CAA483 /* Info.plist */,
-				EA1D3D22280D9DBD00CAA483 /* TWeather2.xcdatamodeld */,
+				EAFDCF8F2825AF37003A628E /* Storyboard */,
+				EA1D3D4D280DA56800CAA483 /* Supporting */,
+				EAFDCF8E2825AEF9003A628E /* Resources */,
 			);
 			path = TWeather2;
-			sourceTree = "<group>";
-		};
-		EA1D3D32280D9DC100CAA483 /* TWeather2Tests */ = {
-			isa = PBXGroup;
-			children = (
-				EA1D3D33280D9DC100CAA483 /* TWeather2Tests.swift */,
-			);
-			path = TWeather2Tests;
-			sourceTree = "<group>";
-		};
-		EA1D3D3C280D9DC100CAA483 /* TWeather2UITests */ = {
-			isa = PBXGroup;
-			children = (
-				EA1D3D3D280D9DC100CAA483 /* TWeather2UITests.swift */,
-				EA1D3D3F280D9DC100CAA483 /* TWeather2UITestsLaunchTests.swift */,
-			);
-			path = TWeather2UITests;
 			sourceTree = "<group>";
 		};
 		EA1D3D4C280DA3BF00CAA483 /* Views */ = {
@@ -160,26 +195,28 @@
 				EA1D3D58280DA63400CAA483 /* MainViewExt.swift */,
 				EA1D3D4E280DA58500CAA483 /* ForecastView.swift */,
 				EA1D3D5A280DA64900CAA483 /* ForecastViewExt.swift */,
+				EA1D3D67280F285300CAA483 /* ForecastCell.swift */,
 				EA1D3D5C280DAB2E00CAA483 /* InfoView.swift */,
 				EA1D3D5E280DAB4200CAA483 /* InfoViewExt.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		EA1D3D4D280DA56800CAA483 /* AppScene */ = {
+		EA1D3D4D280DA56800CAA483 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
 				EA1D3D19280D9DBD00CAA483 /* AppDelegate.swift */,
 				EA1D3D1B280D9DBD00CAA483 /* SceneDelegate.swift */,
 			);
-			path = AppScene;
+			path = Supporting;
 			sourceTree = "<group>";
 		};
 		EA1D3D50280DA58B00CAA483 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				EA1D3D56280DA60100CAA483 /* WeatherModel.swift */,
-				EA1D3D4D280DA56800CAA483 /* AppScene */,
+				EA7DF8DC2819D2C4008A4509 /* MainModel.swift */,
+				EA7DF8EA2824350B008A4509 /* ForecastModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,6 +226,7 @@
 			children = (
 				EA1D3D52280DA5CB00CAA483 /* MainVM.swift */,
 				EA1D3D54280DA5DA00CAA483 /* ForecastVM.swift */,
+				EA373D5D28186468001EAFD3 /* ForecastCellVM.swift */,
 				EA1D3D60280DAB5100CAA483 /* InfoVM.swift */,
 			);
 			path = "View Models";
@@ -206,17 +244,81 @@
 			isa = PBXGroup;
 			children = (
 				EA1D3D63280F227300CAA483 /* xib */,
-				EA1D3D67280F285300CAA483 /* ForecastCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		EA1D3D69280F39D300CAA483 /* Networking */ = {
+		EA1D3D69280F39D300CAA483 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				EA1D3D6A280F39F200CAA483 /* Networking.swift */,
+				EA7DF8E0281B30DE008A4509 /* NetworkingProtocol.swift */,
+				EA7DF8E2281BEA37008A4509 /* LocationManager.swift */,
 			);
-			path = Networking;
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EA373D582816CDA3001EAFD3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EA7DF8E4281BEEB9008A4509 /* MainModelProtocol.swift */,
+				EA7DF8DE281B2BDB008A4509 /* MainVMProtocol.swift */,
+				EA7DF8E82821D93E008A4509 /* InfoVMProtocol.swift */,
+				EAFDCF8B282573D4003A628E /* ForecastModelProtocol.swift */,
+				EA373D592816CEE3001EAFD3 /* ForecastVMProtocol.swift */,
+				EA373D5B28186351001EAFD3 /* ForecastCellVMProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		EA4B80EC2825BA5600A767D1 /* plist */ = {
+			isa = PBXGroup;
+			children = (
+				EA1D3D2A280D9DC000CAA483 /* Info.plist */,
+			);
+			path = plist;
+			sourceTree = "<group>";
+		};
+		EAFDCF8D2825AE11003A628E /* Binding */ = {
+			isa = PBXGroup;
+			children = (
+				EA7DF8E62821BB6E008A4509 /* Box.swift */,
+			);
+			path = Binding;
+			sourceTree = "<group>";
+		};
+		EAFDCF8E2825AEF9003A628E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EA1D3D25280D9DC000CAA483 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EAFDCF8F2825AF37003A628E /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				EA1D3D27280D9DC000CAA483 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		EAFDCF912825B053003A628E /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				EAFDCF922825B075003A628E /* ErrorDelegationProtocol.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		FB93A6D1C1615E48A73643A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9EA4705E031BA21AF1B68E57 /* Pods_TWeather2.framework */,
+				602FE39A3B7F3A3BA51C4D38 /* Pods_TWeather2_TWeather2UITests.framework */,
+				A576911E267D06CB34C4BCB1 /* Pods_TWeather2Tests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,9 +328,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA1D3D43280D9DC100CAA483 /* Build configuration list for PBXNativeTarget "TWeather2" */;
 			buildPhases = (
+				DA348303541409F486BB5C6D /* [CP] Check Pods Manifest.lock */,
 				EA1D3D12280D9DBD00CAA483 /* Sources */,
 				EA1D3D13280D9DBD00CAA483 /* Frameworks */,
 				EA1D3D14280D9DBD00CAA483 /* Resources */,
+				2DEBEE14FB915624C975522B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,6 +347,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA1D3D46280D9DC100CAA483 /* Build configuration list for PBXNativeTarget "TWeather2Tests" */;
 			buildPhases = (
+				ABC9BA75EB81E09DDEC2656E /* [CP] Check Pods Manifest.lock */,
 				EA1D3D2B280D9DC100CAA483 /* Sources */,
 				EA1D3D2C280D9DC100CAA483 /* Frameworks */,
 				EA1D3D2D280D9DC100CAA483 /* Resources */,
@@ -261,9 +366,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA1D3D49280D9DC100CAA483 /* Build configuration list for PBXNativeTarget "TWeather2UITests" */;
 			buildPhases = (
+				C082C5DD8220D39ACC3411BE /* [CP] Check Pods Manifest.lock */,
 				EA1D3D35280D9DC100CAA483 /* Sources */,
 				EA1D3D36280D9DC100CAA483 /* Frameworks */,
 				EA1D3D37280D9DC100CAA483 /* Resources */,
+				443A96B2C89597BA10A88A0B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -345,6 +452,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2DEBEE14FB915624C975522B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TWeather2/Pods-TWeather2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TWeather2/Pods-TWeather2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TWeather2/Pods-TWeather2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		443A96B2C89597BA10A88A0B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TWeather2-TWeather2UITests/Pods-TWeather2-TWeather2UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TWeather2-TWeather2UITests/Pods-TWeather2-TWeather2UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TWeather2-TWeather2UITests/Pods-TWeather2-TWeather2UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABC9BA75EB81E09DDEC2656E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TWeather2Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C082C5DD8220D39ACC3411BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TWeather2-TWeather2UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA348303541409F486BB5C6D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TWeather2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EA1D3D12280D9DBD00CAA483 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -352,17 +562,30 @@
 			files = (
 				EA1D3D24280D9DBD00CAA483 /* TWeather2.xcdatamodeld in Sources */,
 				EA1D3D5D280DAB2E00CAA483 /* InfoView.swift in Sources */,
+				EAFDCF932825B075003A628E /* ErrorDelegationProtocol.swift in Sources */,
 				EA1D3D5B280DA64900CAA483 /* ForecastViewExt.swift in Sources */,
+				EA373D5E28186468001EAFD3 /* ForecastCellVM.swift in Sources */,
 				EA1D3D53280DA5CB00CAA483 /* MainVM.swift in Sources */,
 				EA1D3D68280F285300CAA483 /* ForecastCell.swift in Sources */,
+				EA7DF8DD2819D2C4008A4509 /* MainModel.swift in Sources */,
 				EA1D3D4F280DA58500CAA483 /* ForecastView.swift in Sources */,
+				EA373D5C28186351001EAFD3 /* ForecastCellVMProtocol.swift in Sources */,
+				EAFDCF8C282573D4003A628E /* ForecastModelProtocol.swift in Sources */,
+				EA7DF8DF281B2BDB008A4509 /* MainVMProtocol.swift in Sources */,
 				EA1D3D6B280F39F200CAA483 /* Networking.swift in Sources */,
 				EA1D3D1E280D9DBD00CAA483 /* MainView.swift in Sources */,
+				EA7DF8E1281B30DE008A4509 /* NetworkingProtocol.swift in Sources */,
 				EA1D3D1A280D9DBD00CAA483 /* AppDelegate.swift in Sources */,
+				EA7DF8EB2824350B008A4509 /* ForecastModel.swift in Sources */,
+				EA7DF8E3281BEA37008A4509 /* LocationManager.swift in Sources */,
+				EA7DF8E92821D93E008A4509 /* InfoVMProtocol.swift in Sources */,
 				EA1D3D59280DA63400CAA483 /* MainViewExt.swift in Sources */,
+				EA373D5A2816CEE3001EAFD3 /* ForecastVMProtocol.swift in Sources */,
 				EA1D3D5F280DAB4200CAA483 /* InfoViewExt.swift in Sources */,
 				EA1D3D55280DA5DA00CAA483 /* ForecastVM.swift in Sources */,
+				EA7DF8E5281BEEB9008A4509 /* MainModelProtocol.swift in Sources */,
 				EA1D3D61280DAB5100CAA483 /* InfoVM.swift in Sources */,
+				EA7DF8E72821BB6E008A4509 /* Box.swift in Sources */,
 				EA1D3D1C280D9DBD00CAA483 /* SceneDelegate.swift in Sources */,
 				EA1D3D57280DA60100CAA483 /* WeatherModel.swift in Sources */,
 			);
@@ -372,7 +595,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA1D3D34280D9DC100CAA483 /* TWeather2Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,8 +602,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA1D3D3E280D9DC100CAA483 /* TWeather2UITests.swift in Sources */,
-				EA1D3D40280D9DC100CAA483 /* TWeather2UITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +750,7 @@
 		};
 		EA1D3D44280D9DC100CAA483 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22120FA8ACCCB6CB1EE495E6 /* Pods-TWeather2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -538,6 +759,7 @@
 				DEVELOPMENT_TEAM = N3M99ZZ624;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TWeather2/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TWeather2;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -558,6 +780,7 @@
 		};
 		EA1D3D45280D9DC100CAA483 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32B11A835B79C55685D86DFF /* Pods-TWeather2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -566,6 +789,7 @@
 				DEVELOPMENT_TEAM = N3M99ZZ624;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TWeather2/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TWeather2;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -586,6 +810,7 @@
 		};
 		EA1D3D47280D9DC100CAA483 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44A6C0F754EE35931AED6B4F /* Pods-TWeather2Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -606,6 +831,7 @@
 		};
 		EA1D3D48280D9DC100CAA483 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 803FF734C8F4AECDD3799ADD /* Pods-TWeather2Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -626,6 +852,7 @@
 		};
 		EA1D3D4A280D9DC100CAA483 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC42C213F580DD5BE500CE61 /* Pods-TWeather2-TWeather2UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -644,6 +871,7 @@
 		};
 		EA1D3D4B280D9DC100CAA483 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CDDBC7D0B8A352B7DFF74E4 /* Pods-TWeather2-TWeather2UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -708,7 +936,8 @@
 				EA1D3D23280D9DBD00CAA483 /* TWeather2.xcdatamodel */,
 			);
 			currentVersion = EA1D3D23280D9DBD00CAA483 /* TWeather2.xcdatamodel */;
-			path = TWeather2.xcdatamodeld;
+			name = TWeather2.xcdatamodeld;
+			path = TWeather2.xcdatamodeld/TWeather2.xcdatamodeld/TWeather2.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

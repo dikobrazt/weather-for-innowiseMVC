@@ -11,7 +11,9 @@ import UIKit
 
 class InfoView: UIViewController{
     
-//MARK: - Declaration
+    
+    
+    //MARK: - Declaration
     let infoLabel = UILabel()
     let windIW = UIImageView()
     let windLabel = UILabel()
@@ -21,12 +23,23 @@ class InfoView: UIViewController{
     let pressureLabel = UILabel()
     let tempMaxIW = UIImageView()
     let tempMaxLabel = UILabel()
+    var mainVM: MainVM = MainVM()
+    //init
+    init(data: MainVM){
+        self.mainVM = data
+        super.init(nibName: nil, bundle: nil)
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
     
 //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        //addSubviews
         view.backgroundColor = .white
-        
         view.addSubview(infoLabel)
         view.addSubview(windIW)
         view.addSubview(windLabel)
@@ -40,7 +53,7 @@ class InfoView: UIViewController{
     
 //MARK: - viewWillAppear
     override func viewWillAppear(_ animated: Bool) {
-//        funcs
+//        setUpfuncs
         setUpInfoLabel()
         setUpWindIW()
         setUpWindLabel()
@@ -50,7 +63,7 @@ class InfoView: UIViewController{
         setUpPressureLabel()
         setUpTempMaxIW()
         setUpTempMaxLabel()
-        updateInterface(weatherData: dataGlobal)
+        updateInterface(weatherData: mainVM)
         
 //        frames
         infoLabel.frame = .init(x: 20, y: 35, width: 300, height: 50)

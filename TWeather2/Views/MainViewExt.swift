@@ -11,27 +11,6 @@ import UIKit
 
 extension MainView{
     
-    func setUpForecastBtn(){
-        forecastBtn.setTitle("Forecast", for: .normal)
-        forecastBtn.setTitle("Try later...", for: .disabled)
-        forecastBtn.backgroundColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1)
-        forecastBtn.layer.cornerRadius = 15
-        forecastBtn.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .bold)
-        forecastBtn.setTitleColor(.white, for: .normal)
-        
-        forecastBtn.isEnabled = false
-    }
-    
-    @objc func goToForecastView(){
-        let forecastView = ForecastView()
-        if let forecastCardView = forecastView.sheetPresentationController{
-            forecastCardView.detents = [.large()]
-            forecastCardView.prefersGrabberVisible = true
-            forecastCardView.preferredCornerRadius = 25
-        }
-        present(forecastView, animated: true, completion: nil)
-    }
-    
     func setUpMainLabel(){
         mainLabel.text = "TWeather"
         mainLabel.textColor = .black
@@ -46,37 +25,23 @@ extension MainView{
         countryLabel.textAlignment = .center
     }
     
-    func setUpConditionIW(){
-        conditionIW.image = UIImage(systemName: "questionmark.circle")
-        conditionIW.tintColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1)
-    }
-    
-    func setUpInfoBtn(){
-        infoBtn.setTitle("More info", for: .normal)
-        infoBtn.setTitle("Try later...", for: .disabled)
-        infoBtn.backgroundColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1)
-        infoBtn.layer.cornerRadius = 25
-        infoBtn.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .regular)
-        infoBtn.setTitleColor(.white, for: .normal)
-        infoBtn.isEnabled = false
-    }
-    
-    @objc func goToInfoView(){
-        let infoView = InfoView()
-        
-        if let infoCardView = infoView.sheetPresentationController{
-            infoCardView.detents = [.medium()]
-            infoCardView.prefersGrabberVisible = true
-            infoCardView.preferredCornerRadius = 25
-            }
-        self.present(infoView, animated: true, completion: nil)
-    }
-    
     func setUpCityLabel(){
         cityLabel.text = "--city--"
         cityLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         cityLabel.font = UIFont.systemFont(ofSize: 35, weight: .bold)
         cityLabel.textAlignment = .center
+    }
+    
+    func setUpConditionLabel(){
+        conditionLabel.text = "--conditon--"
+        conditionLabel.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        conditionLabel.font = UIFont.systemFont(ofSize: 25, weight: .bold)
+        conditionLabel.textAlignment = .center
+    }
+    
+    func setUpConditionIW(){
+        conditionIW.image = UIImage(systemName: "questionmark.circle")
+        conditionIW.tintColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1)
     }
     
     func setUpTempLabel(){
@@ -86,24 +51,54 @@ extension MainView{
         tempLabel.textAlignment = .center
     }
     
-    func setUpConditionLabel(){
-        conditionLabel.text = "--conditon--"
-        conditionLabel.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-        conditionLabel.font = UIFont.systemFont(ofSize: 25, weight: .bold)
-        conditionLabel.textAlignment = .center
+    func setUpInfoBtn(){
+        infoBtn.setTitle("More info", for: .normal)
+        infoBtn.backgroundColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1)
+        infoBtn.layer.cornerRadius = 25
+        infoBtn.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .regular)
+        infoBtn.setTitleColor(.white, for: .normal)
+    }
+    
+    func setUpForecastBtn(){
+        forecastBtn.setTitle("Forecast", for: .normal)
+        forecastBtn.backgroundColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1)
+        forecastBtn.layer.cornerRadius = 15
+        forecastBtn.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .bold)
+        forecastBtn.setTitleColor(.white, for: .normal)
+    }
+    
+    @objc func goToInfoView(){
+        let infoView = InfoView(data: mainVM!)
+        if let infoCardView = infoView.sheetPresentationController{
+            infoCardView.detents = [.medium()]
+            infoCardView.prefersGrabberVisible = true
+            infoCardView.preferredCornerRadius = 25
+        }
+        self.present(infoView, animated: true, completion: nil)
+    }
+    
+    @objc func goToForecastView(){
+        let forecastView = ForecastView()
+        forecastView.forecastVM = mainVM?.returnForecastVM()
+        if let forecastCardView = forecastView.sheetPresentationController{
+            forecastCardView.detents = [.large()]
+            forecastCardView.prefersGrabberVisible = true
+            forecastCardView.preferredCornerRadius = 25
+        }
+        present(forecastView, animated: true, completion: nil)
     }
 }
 
 
 //MARK: - Networking delegate
-extension MainView: NetworkingDelegate{
-    func updateInterface(_: Networking, with weatherData: WeatherData) {
-        DispatchQueue.main.async {
-             self.countryLabel.text = weatherData.city.country
-             self.cityLabel.text = weatherData.city.name
-             self.conditionLabel.text = weatherData.list.first!.weather.last?.description
-             self.tempLabel.text = Int(round(weatherData.list.first!.main.temp - 273)).description + "°C"
-             if var imageNum = weatherData.list.first!.weather.last!.id {
+extension MainView{
+    func updateInterface(with weatherData: MainVM) {
+        DispatchQueue.main.async { [self] in
+            self.countryLabel.text = mainVM?.country
+            self.cityLabel.text = mainVM?.city
+            self.conditionLabel.text = mainVM?.condition
+            self.tempLabel.text = mainVM?.temp
+            if var imageNum = mainVM?.imageNum {
              switch imageNum {
              case 200...232:
                  self.conditionIW.image = UIImage(systemName: "tropicalstorm")
@@ -140,7 +135,6 @@ extension MainView: NetworkingDelegate{
                 
             UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
             }))
-            
             self.present(alertVC, animated: true, completion: nil)
         }
     }
