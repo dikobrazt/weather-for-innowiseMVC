@@ -76,7 +76,7 @@ extension MainView{
         }
         self.present(infoView, animated: true, completion: nil)
     }
-    
+
     @objc func goToForecastView(){
         let forecastView = ForecastView()
         forecastView.forecastVM = mainVM?.returnForecastVM()

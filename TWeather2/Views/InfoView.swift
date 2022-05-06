@@ -12,7 +12,6 @@ import UIKit
 class InfoView: UIViewController{
     
     
-    
     //MARK: - Declaration
     let infoLabel = UILabel()
     let windIW = UIImageView()

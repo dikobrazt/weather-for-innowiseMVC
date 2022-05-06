@@ -8,7 +8,6 @@
 import Foundation
 
 
-
 class ForecastVM: ForecastVMProtocol{
     
     init(data: MainModel) {

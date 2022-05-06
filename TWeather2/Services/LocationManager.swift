@@ -4,7 +4,6 @@
 //
 //  Created by Vladislav Tuleiko on 29.04.22.
 //
-
 import Foundation
 import CoreLocation
 

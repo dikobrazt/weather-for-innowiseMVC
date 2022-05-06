@@ -17,7 +17,6 @@ class ForecastCell: UITableViewCell{
     @IBOutlet weak var conditionLabel: UILabel!
     @IBOutlet weak var conditionIW: UIImageView!
     
-    
     weak var forecastViewModel: ForecastCellVMProtocol?{
         willSet(forecastViewModel){
             timeLabel.text = forecastViewModel?.time

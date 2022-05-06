@@ -55,7 +55,6 @@ extension ForecastView: UITableViewDelegate, UITableViewDataSource{
 
 
 
-
 //let forecastCellVM = forecastVM?.forecastCellViewModel(forIndexPath: indexPath.row)
 
 //cell.forecastViewModel = forecastCellVM

@@ -8,7 +8,6 @@
 import UIKit
 
 
-
 class ForecastView: UIViewController {
     
 //MARK: - Declaration

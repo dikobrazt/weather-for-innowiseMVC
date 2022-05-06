@@ -8,7 +8,6 @@
 import Foundation
 
 
-
 class MainModel: MainModelProtocol{
    
     var country: String
